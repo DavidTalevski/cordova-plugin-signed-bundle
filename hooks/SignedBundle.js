@@ -27,7 +27,7 @@ module.exports = function(context) {
 		if(context.opts.options.bundle) {
 			// create bundle
 			pathToOutput = path.join(context.opts.projectRoot, AAB_PATH);
-			process.execSync('gradlew bundleRelease', {
+			process.execSync('gradle bundleRelease', {
 				cwd: path.join(context.opts.projectRoot, "platforms/android"),
 				stdio: "inherit"
 			});
